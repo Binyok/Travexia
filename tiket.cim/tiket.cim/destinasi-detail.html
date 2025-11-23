@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinasi - Travexia</title>
+  <meta name="description" content="Temukan hotel terbaik dan informasi lengkap destinasi populer">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/styles.css" />
+  <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/promo-destinasi.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container main-header">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✈</div>
+        <span class="logo-text">Travexia</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html">Beranda</a>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Layanan ▾</button>
+          <div class="dropdown-content">
+            <a href="flights.html">Pesawat</a>
+            <a href="hotels.html">Hotel</a>
+            <a href="trains.html">Kereta</a>
+
+            <a href="bus.html">Bus</a>
+          </div>
+        </div>
+
+        <a href="blog.html">Blog</a>
+      </nav>
+
+      <a href="https://wa.me/62895639068080" target="_blank" class="btn-primary desktop-only">
+        Pesan Sekarang
+      </a>
+
+      <button id="mobileMenuButton" class="mobile-menu-button">☰</button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <nav>
+        <a href="index.html">Beranda</a>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Layanan ▾</button>
+          <div class="dropdown-content">
+            <a href="flights.html">Pesawat</a>
+            <a href="hotels.html">Hotel</a>
+            <a href="trains.html">Kereta</a>
+        
+            <a href="bus.html">Bus</a>
+          </div>
+        </div>
+
+  
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section class="page-title" id="destHero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="index.html#destinations">Destinasi</a></li>
+          <li class="current" id="destBreadcrumb">Bali</li>
+        </ol>
+      </div>
+      <h1 id="destTitle">Bali</h1>
+      <p id="destSubtitle">Surga tropis dengan pantai indah dan budaya yang kaya</p>
+    </div>
+  </section>
+
+  <!-- DESTINATION INFO -->
+  <section class="section dest-info-section">
+    <div class="container">
+      <div class="dest-info-layout">
+        
+        <!-- Main Info -->
+        <div class="dest-main-content">
+          
+          <!-- Overview Card -->
+          <div class="dest-overview-card">
+            <h2>Tentang <span id="destName">Bali</span></h2>
+            <div class="dest-description" id="destDescription">
+              <!-- Diisi via JS -->
+            </div>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="dest-stats-grid" id="destStats">
+            <!-- Diisi via JS -->
+          </div>
+
+          <!-- Attractions -->
+          <div class="dest-section-card">
+            <h3><i data-lucide="map-pin"></i> Tempat Wisata Populer</h3>
+            <div class="attractions-grid" id="attractionsList">
+              <!-- Diisi via JS -->
+            </div>
+          </div>
+
+          <!-- Activities -->
+          <div class="dest-section-card">
+            <h3><i data-lucide="activity"></i> Aktivitas yang Bisa Dilakukan</h3>
+            <div class="activities-grid" id="activitiesList">
+              <!-- Diisi via JS -->
+            </div>
+          </div>
+
+          <!-- Best Time to Visit -->
+          <div class="dest-section-card">
+            <h3><i data-lucide="calendar"></i> Waktu Terbaik Berkunjung</h3>
+            <div class="best-time-content" id="bestTimeContent">
+              <!-- Diisi via JS -->
+            </div>
+          </div>
+
+          <!-- Tips -->
+          <div class="dest-section-card">
+            <h3><i data-lucide="lightbulb"></i> Tips Berwisata</h3>
+            <div class="tips-list" id="tipsList">
+              <!-- Diisi via JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="dest-sidebar">
+          
+          <!-- Quick Booking Card -->
+          <div class="quick-booking-card">
+            <h3>Cari Hotel di <span id="destNameSidebar">Bali</span></h3>
+            <form class="quick-booking-form" id="quickBookingForm">
+              <div class="form-field">
+                <label>Check-in</label>
+                <input type="date" id="checkin" required>
+              </div>
+              <div class="form-field">
+                <label>Check-out</label>
+                <input type="date" id="checkout" required>
+              </div>
+              <div class="form-field">
+                <label>Tamu & Kamar</label>
+                <select id="guests">
+                  <option>1 Kamar, 2 Tamu</option>
+                  <option>2 Kamar, 4 Tamu</option>
+                  <option>3 Kamar, 6 Tamu</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-primary full-width">
+                Cari Hotel
+              </button>
+            </form>
+          </div>
+
+          <!-- Price Info Card -->
+          <div class="sidebar-info-card">
+            <h4>Informasi Harga</h4>
+            <div class="price-info-item">
+              <span class="price-label">Mulai dari</span>
+              <span class="price-value" id="startingPrice">Rp 350.000</span>
+              <span class="price-note">per malam</span>
+            </div>
+            <div class="price-info-divider"></div>
+            <div class="price-features">
+              <div class="price-feature">
+                <i data-lucide="check"></i>
+                <span>Harga terbaik dijamin</span>
+              </div>
+              <div class="price-feature">
+                <i data-lucide="check"></i>
+                <span>Gratis pembatalan</span>
+              </div>
+              <div class="price-feature">
+                <i data-lucide="check"></i>
+                <span>Bayar di hotel</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Card -->
+          <div class="sidebar-info-card">
+            <h4>Butuh Bantuan?</h4>
+            <p class="contact-text">Tim kami siap membantu Anda merencanakan perjalanan impian</p>
+            <a href="https://wa.me/62895639068080" target="_blank" class="btn-outline full-width">
+              <i data-lucide="message-circle"></i>
+              Hubungi Kami
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR HOTELS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Hotel Populer di <span id="destNameHotels">Bali</span></h2>
+          <p>Pilihan hotel terbaik dengan harga spesial</p>
+        </div>
+        <a href="hotels.html" class="section-link">Lihat Semua →</a>
+      </div>
+      <div class="hotel-card-grid" id="popularHotels">
+        <!-- Diisi via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER DESTINATIONS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-center">
+        <h2>Destinasi Lainnya</h2>
+        <p>Jelajahi tempat menarik lainnya</p>
+      </div>
+      <div class="card-grid four-cols" id="otherDestinations">
+        <!-- Diisi via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footerr">
+    <div class="footerr-main">
+      <div class="container footerr-grid">
+        <div class="footerr-brand">
+          <a href="index.html" class="logo footerr-logo">
+            <div class="logo-icon">✈</div>
+            <span class="logo-text">Travexia</span>
+          </a>
+          <p class="footerr-text">Satu aplikasi untuk semua kebutuhan perjalanan Anda. Pesan tiket pesawat, hotel,
+            kereta, dan lainnya dengan mudah.</p>
+          <div class="footerr-socials">
+            <a href="#" class="social-circle">f</a>
+            <a href="#" class="social-circle">t</a>
+            <a href="#" class="social-circle">in</a>
+            <a href="#" class="social-circle">▶</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footerr-title">Produk</h3>
+          <ul class="footerr-links">
+            <li><a href="flights.html">Pesawat</a></li>
+            <li><a href="hotels.html">Hotel</a></li>
+            <li><a href="trains.html">Kereta Api</a></li>
+            <li><a href="#">Bus &amp; Travel</a></li>
+            <li><a href="sewamobil.html">Sewa Mobil</a></li>
+            <li><a href="events.html">Event</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footerr-title">Perusahaan</h3>
+          <ul class="footerr-links">
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footerr-title">Dukungan</h3>
+          <ul class="footerr-links">
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat &amp; Ketentuan</a></li>
+          </ul>
+          <h3 class="footerr-title footerr-title-spaced">Kontak</h3>
+          <ul class="footerr-links">
+            <li><a href="mailto:info@travexia.com">info@travexia.com</a></li>
+            <li><a href="tel:+622150001234">+62 21 5000 1234</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footerr-bottom">
+      <div class="container footerr-bottom-inner">
+        <p>© 2025 Travexia. All Rights Reserved.</p>
+        <p>Made with ❤️ in Indonesia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="/tiket.cim/tiket.cim/assets/js/destinasi.js"></script>
+
+</body>
+
+</html>

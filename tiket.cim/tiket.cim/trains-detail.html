@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travexia - Detail Kereta</title>
+    <meta name="description" content="Pesan tiket kereta api murah dan mudah di Travexia. Bandingkan harga, pilih jadwal terbaik, dan booking tiket kereta antar kota dengan cepat dan aman.">
+<meta name="keywords" content="Travexia, tiket kereta api, pesan tiket kereta, tiket kereta murah, booking kereta, KAI, tiket kereta online">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/flight.css" />
+   
+    
+  </head>
+  <body data-page="train-detail">
+
+    <header class="site-header">
+      <div class="header-main">
+        <div class="container header-inner">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">🚆</div>
+            <span class="logo-text">Travexia</span>
+          </a>
+
+          <nav class="nav-desktop">
+            <a href="index.html">Beranda</a>
+
+            <div class="dropdown">
+              <button class="dropdown-btn">Layanan ▾</button>
+              <div class="dropdown-content">
+                <a href="flights.html">Pesawat</a>
+                <a href="hotels.html">Hotel</a>
+                <a href="trains.html">Kereta</a>
+                <a href="bus.html">Bus</a>
+
+              </div>
+            </div>
+
+            <a href="blog.html">Blog</a>
+          </nav>
+
+          <a href="#" class="btn btn-primary btn-small">Daftar Sekarang</a>
+        </div>
+
+        <button class="nav-toggle" data-toggle="mobile-menu" aria-label="Toggle menu">
+          ☰
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <nav>
+          <a href="index.html">Beranda</a>
+
+          <div class="dropdown">
+            <button class="dropdown-btn">Layanan ▾</button>
+            <div class="dropdown-content">
+              <a href="flights.html">Pesawat</a>
+              <a href="hotels.html">Hotel</a>
+              <a href="trains.html">Kereta</a>
+              <a href="bus.html">Bus</a>
+
+            </div>
+          </div>
+
+          <a href="blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="detail-hero">
+      <div class="container detail-hero-inner">
+        <div>
+          <h1 class="detail-hero-title">Detail Kereta</h1>
+          <p class="detail-hero-text">Cek informasi lengkap perjalanan kereta sebelum melanjutkan pembayaran.</p>
+        </div>
+        <a class="detail-back-link" href="trains.html">← Kembali ke daftar kereta</a>
+      </div>
+    </section>
+
+    <main class="page-section detail-page">
+      <div class="container">
+        <div class="detail-layout">
+          <section class="detail-main">
+
+            <article class="card detail-card detail-flight-card" data-flight-card>
+              <div class="detail-card-head">
+                <div class="detail-airline">
+                  <div class="detail-airline-logo" data-detail-airline-logo>KA</div>
+                  <div>
+                    <p class="detail-flight-number" data-detail-flight-number>KA-112</p>
+                    <h2 class="detail-airline-name" data-detail-airline-name>Argo Bromo Anggrek</h2>
+                    <div class="detail-rating" data-detail-rating>★ 4.6 (1.980 ulasan)</div>
+                  </div>
+                </div>
+                <div class="detail-badges">
+                  <span class="pill pill-success">Non-Stop</span>
+                  <span class="detail-chip detail-chip-soft" data-detail-class>Pilih kelas sesuai kenyamanan</span>
+                </div>
+              </div>
+
+              <div class="detail-route">
+                <div class="detail-route-col">
+                  <p class="detail-time" data-detail-departure-time>06:30</p>
+                  <p class="detail-city" data-detail-departure-city>Jakarta</p>
+                  <p class="detail-airport" data-detail-departure-airport>Gambir (GMR)</p>
+                </div>
+
+                <div class="detail-route-middle">
+                  <div class="detail-route-line"></div>
+                  <p data-detail-duration>Durasi 8j 15m</p>
+                </div>
+
+                <div class="detail-route-col detail-route-col-right">
+                  <p class="detail-time" data-detail-arrival-time>14:45</p>
+                  <p class="detail-city" data-detail-arrival-city>Surabaya</p>
+                  <p class="detail-airport" data-detail-arrival-airport>Surabaya Pasar Turi (SBI)</p>
+                </div>
+              </div>
+
+              <div class="detail-amenities">
+                <span class="detail-chip">Pendingin Ruangan</span>
+                <span class="detail-chip">Reclining Seat</span>
+                <span class="detail-chip">Snack & Minuman</span>
+                <span class="detail-chip">Colokan Listrik</span>
+              </div>
+            </article>
+
+            <article class="card detail-card">
+              <h2 class="detail-card-title">Pilih Kelas</h2>
+              <div class="class-list" data-class-list>
+
+                <label class="class-card is-selected" data-class-card data-class-id="economy" data-class-name="Ekonomi" data-class-price="350000">
+                  <input type="radio" name="flightClass" value="economy" checked />
+                  <div class="class-card-body">
+                    <div>
+                      <p class="class-name">Ekonomi</p>
+                      <p class="class-features">Bagasi 20kg • AC • Reclining Seat</p>
+                    </div>
+                    <p class="class-price">Rp 350.000</p>
+                  </div>
+                </label>
+
+                <label class="class-card" data-class-card data-class-id="business" data-class-name="Bisnis" data-class-price="550000">
+                  <input type="radio" name="flightClass" value="business" />
+                  <div class="class-card-body">
+                    <div>
+                      <p class="class-name">Bisnis</p>
+                      <p class="class-features">Bagasi 30kg • Snack • AC Premium</p>
+                    </div>
+                    <p class="class-price">Rp 550.000</p>
+                  </div>
+                </label>
+
+                <label class="class-card" data-class-card data-class-id="executive" data-class-name="Eksekutif" data-class-price="850000">
+                  <input type="radio" name="flightClass" value="executive" />
+                  <div class="class-card-body">
+                    <div>
+                      <p class="class-name">Eksekutif</p>
+                      <p class="class-features">Bagasi 40kg • Full Meal • AC Premium • Recliner</p>
+                    </div>
+                    <p class="class-price">Rp 850.000</p>
+                  </div>
+                </label>
+
+              </div>
+            </article>
+
+            <article class="card detail-card">
+              <h2 class="detail-card-title">Kebijakan &amp; Ketentuan</h2>
+              <div class="policy-list">
+                <div>
+                  <p class="policy-title">Reschedule</p>
+                  <p class="policy-text">Perubahan jadwal dapat dilakukan dengan biaya administrasi + selisih harga tiket.</p>
+                </div>
+                <div>
+                  <p class="policy-title">Refund</p>
+                  <p class="policy-text">Pembatalan tiket akan dikenakan potongan sesuai peraturan KAI.</p>
+                </div>
+                <div>
+                  <p class="policy-title">Bagasi</p>
+                  <p class="policy-text">Bagasi maksimal mengikuti ketentuan sesuai kelas dan regulasi KAI.</p>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <aside class="detail-sidebar">
+            <div class="card detail-summary" data-detail-summary>
+              <div class="detail-summary-grid">
+                <div>
+                  <p class="detail-summary-label">Penumpang</p>
+                  <p class="detail-summary-value" data-summary-passengers>1 Dewasa</p>
+                </div>
+                <div>
+                  <p class="detail-summary-label">Kelas</p>
+                  <p class="detail-summary-value" data-summary-class>Ekonomi</p>
+                </div>
+              </div>
+
+              <ul class="detail-summary-breakdown">
+                <li>
+                  <span>Harga Tiket</span>
+                  <strong data-summary-price>Rp 350.000</strong>
+                </li>
+                <li>
+                  <span>Pajak &amp; Biaya</span>
+                  <strong data-summary-tax>Rp 25.000</strong>
+                </li>
+              </ul>
+
+              <div class="detail-summary-total">
+                <div>
+                  <p class="detail-summary-label">Total Pembayaran</p>
+                  <p class="detail-summary-grand" data-summary-total>Rp 375.000</p>
+                </div>
+
+                <button class="btn btn-primary" id="btnPay">Lanjut ke Pembayaran</button>
+              </div>
+
+              <ul class="detail-summary-benefits">
+                <li>Konfirmasi instan via WhatsApp</li>
+                <li>E-ticket langsung dikirim</li>
+                <li>Dapat reschedule &amp; refund</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo footer-logo">
+              <div class="logo-icon">🚆</div>
+              <span class="logo-text">Travexia</span>
+            </a>
+            <p class="footer-text">Satu aplikasi untuk semua kebutuhan perjalanan Anda. Pesan tiket kereta, pesawat, hotel, dan lainnya dengan mudah.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-circle">f</a>
+              <a href="#" class="social-circle">t</a>
+              <a href="#" class="social-circle">in</a>
+              <a href="#" class="social-circle">▶</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Produk</h3>
+            <ul class="footer-links">
+              <li><a href="flights.html">Pesawat</a></li>
+              <li><a href="#">Hotel</a></li>
+              <li><a href="#">Kereta Api</a></li>
+              <li><a href="#">Bus &amp; Travel</a></li>
+              <li><a href="#">Sewa Mobil</a></li>
+              <li><a href="#">Event</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Perusahaan</h3>
+            <ul class="footer-links">
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-title">Dukungan</h3>
+            <ul class="footer-links">
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">Hubungi Kami</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat &amp; Ketentuan</a></li>
+            </ul>
+
+            <h3 class="footer-title footer-title-spaced">Kontak</h3>
+            <ul class="footer-links">
+              <li><a href="mailto:info@travexia.com">info@travexia.com</a></li>
+              <li><a href="tel:+622150001234">+62 21 5000 1234</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2025 Travexia. All Rights Reserved.</p>
+          <p>Made with ❤️ in Indonesia</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+document.getElementById("btnPay").addEventListener("click", function () {
+
+  const airline = document.querySelector("[data-detail-airline-name]").innerText;
+  const flightNumber = document.querySelector("[data-detail-flight-number]").innerText;
+  const fromCity = document.querySelector("[data-detail-departure-city]").innerText;
+  const toCity = document.querySelector("[data-detail-arrival-city]").innerText;
+  const departTime = document.querySelector("[data-detail-departure-time]").innerText;
+  const arriveTime = document.querySelector("[data-detail-arrival-time]").innerText;
+  const flightClass = document.querySelector("[data-summary-class]").innerText;
+  const passengers = document.querySelector("[data-summary-passengers]").innerText;
+  const total = document.querySelector("[data-summary-total]").innerText;
+
+  const message = `
+Halo Admin Travexia, saya ingin memesan tiket kereta:
+
+🚆 *${airline}* (${flightNumber})
+📍 *${fromCity}* (${departTime}) → *${toCity}* (${arriveTime})
+🎫 Kelas: *${flightClass}*
+👤 Penumpang: *${passengers}*
+💰 Total: *${total}*
+
+Mohon dibantu proses pembayaran dan konfirmasi.
+Terima kasih 🙏
+  `;
+
+  const phone = "62895639068080";
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+});
+</script>
+<script src="/tiket.cim/tiket.cim/assets/js/trains.js"></script>
+<script src="/tiket.cim/tiket.cim/assets/js/script.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travexia - Penerbangan (Static)</title>
+  <meta name="description" content="Pesan tiket pesawat murah dan mudah di Travexia. Bandingkan harga, pilih maskapai terbaik, dan booking tiket pesawat domestik maupun internasional dengan cepat dan aman.">
+<meta name="keywords" content="Travexia, tiket pesawat, pesan tiket pesawat, tiket pesawat murah, booking pesawat, maskapai, tiket pesawat online">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/flight.css" />
+  <script src="/tiket.cim/tiket.cim/assets/js/flight.js" defer></script>
+</head>
+
+<body data-page="flights">
+  <header class="header">
+
+  <div class="container main-header">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">✈</div>
+      <span class="logo-text">Travexia</span>
+    </a>
+
+    <nav class="nav-desktop">
+      <a href="index.html">Beranda</a>
+
+      <div class="dropdown">
+        <button class="dropdown-btn">Layanan ▾</button>
+        <div class="dropdown-content">
+          <a href="flights.html">Pesawat</a>
+          <a href="hotels.html">Hotel</a>
+          <a href="trains.html">Kereta</a>
+          <a href="bus.html">Bus</a>
+        </div>
+      </div>
+
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <!-- Tombol desktop -->
+    <a href="https://wa.me/62895639068080" target="_blank" class="btn-primary desktop-only">
+      Pesan Sekarang
+    </a>
+
+    <!-- Tombol hamburger -->
+    <button id="mobileMenuButton" class="mobile-menu-button">☰</button>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu hidden">
+    <nav>
+      <a href="#home">Beranda</a>
+
+      <div class="dropdown">
+        <button class="dropdown-btn">Layanan ▾</button>
+        <div class="dropdown-content">
+          <a href="flights.html">Pesawat</a>
+          <a href="hotels.html">Hotel</a>
+          <a href="trains.html">Kereta</a>
+          <a href="bus.html">Bus</a>
+        </div>
+      </div>
+
+      <a href="blog.html">Blog</a>
+    </nav>
+  </div>
+
+</header>
+
+  <main class="flights-page">
+    <section class="flights-search-bar">
+      <!-- Page Title -->
+<div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/keindahan\ Surabaya.webp);">
+  <div class="container position-relative">
+    <h1>Tiket Pesawat</h1>
+    <p>Travexia adalah platform pemesanan tiket pesawat yang memudahkan Anda menemukan penerbangan terbaik dengan harga kompetitif. Pesan tiket dengan cepat, aman, dan praktis langsung dari satu tempat.</p>
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li class="current">Tiket Pesawat</li>
+      </ol>
+    </nav>
+  </div>
+</div><!-- End Page Title -->
+    </section>
+
+    <section class="flights-main">
+      <div class="container flights-layout">
+        <aside class="flights-filters" id="filters-sidebar">
+          <div class="filters-card">
+            <div class="filters-header">
+              <h2>Filter</h2>
+              <button type="button" class="filters-reset" id="reset-filters">Reset</button>
+            </div>
+
+            <div class="filters-section">
+              <h3>Harga</h3>
+              <input type="range" id="price-max" min="0" max="10000000" step="100000" value="10000000" />
+              <div class="filters-range-text">
+                <span id="price-min-label">Rp 0</span>
+                <span id="price-max-label">Rp 10.000.000</span>
+              </div>
+            </div>
+
+            <div class="filters-section">
+              <h3>Waktu Keberangkatan</h3>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-time value="morning" />
+                <span>Pagi (00:00 - 06:00)</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-time value="afternoon" />
+                <span>Siang (06:00 - 12:00)</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-time value="evening" />
+                <span>Sore (12:00 - 18:00)</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-time value="night" />
+                <span>Malam (18:00 - 24:00)</span>
+              </label>
+            </div>
+
+            <div class="filters-section">
+              <h3>Maskapai</h3>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-airline value="Garuda Indonesia" />
+                <span>Garuda Indonesia</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-airline value="Lion Air" />
+                <span>Lion Air</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-airline value="AirAsia" />
+                <span>AirAsia</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-airline value="Batik Air" />
+                <span>Batik Air</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" data-filter-airline value="Citilink" />
+                <span>Citilink</span>
+              </label>
+            </div>
+
+            
+          </div>
+        </aside>
+
+        <section class="flights-results">
+
+          <div id="search-summary" class="search-summary"></div>
+
+
+          <div data-flights-list class="flights-list"></div>
+
+          <div class="results-load-more" id="load-more-wrapper">
+            <button type="button" id="load-more-flights" class="btn btn-secondary">Muat Lebih Banyak</button>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo footer-logo">
+            <div class="logo-icon">✈</div>
+            <span class="logo-text">TravelHub</span>
+          </a>
+          <p class="footer-text">Satu aplikasi untuk semua kebutuhan perjalanan Anda. Pesan tiket pesawat, hotel,
+            kereta, dan lainnya dengan mudah.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-circle">f</a>
+            <a href="#" class="social-circle">t</a>
+            <a href="#" class="social-circle">in</a>
+            <a href="#" class="social-circle">▶</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Produk</h3>
+          <ul class="footer-links">
+            <li><a href="flights.html">Pesawat</a></li>
+            <li><a href="#">Hotel</a></li>
+            <li><a href="#">Kereta Api</a></li>
+            <li><a href="#">Bus &amp; Travel</a></li>
+            <li><a href="#">Sewa Mobil</a></li>
+            <li><a href="#">Event</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Perusahaan</h3>
+          <ul class="footer-links">
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Dukungan</h3>
+          <ul class="footer-links">
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat &amp; Ketentuan</a></li>
+          </ul>
+          <h3 class="footer-title footer-title-spaced">Kontak</h3>
+          <ul class="footer-links">
+            <li><a href="mailto:info@travelhub.com">info@travelhub.com</a></li>
+            <li><a href="tel:+622150001234">+62 21 5000 1234</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2025 TravelHub. All Rights Reserved.</p>
+        <p>Made with ❤️ in Indonesia</p>
+      </div>
+    </div>
+  </footer>
+  
+
+<script src="/tiket.cim/tiket.cim/assets/js/script.js"></script>
+</body>
+
+</html>

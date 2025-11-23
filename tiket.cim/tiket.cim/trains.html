@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travexia - Cari Kereta</title>
+    <meta name="description" content="Cari dan pesan tiket kereta api dengan harga terbaik">
+    <meta name="keywords" content="tiket kereta, kereta api, booking kereta, travel kereta">
+
+    <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/flight.css" />
+    <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/train.css" />
+    <script src="/tiket.cim/tiket.cim/assets/js/trains.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container main-header">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">✈</div>
+          <span class="logo-text">Travexia</span>
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="index.html">Beranda</a>
+
+          <div class="dropdown">
+            <button class="dropdown-btn">Layanan ▾</button>
+            <div class="dropdown-content">
+              <a href="flights.html">Pesawat</a>
+              <a href="hotels.html">Hotel</a>
+              <a href="trains.html">Kereta</a>
+              <a href="bus.html">Bus</a>
+            </div>
+          </div>
+
+          <a href="blog.html">Blog</a>
+        </nav>
+
+        <!-- Tombol desktop -->
+        <a href="https://wa.me/62895639068080" target="_blank" class="btn-primary desktop-only">
+          Pesan Sekarang
+        </a>
+
+        <!-- Tombol hamburger -->
+        <button id="mobileMenuButton" class="mobile-menu-button">☰</button>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <nav>
+          <a href="index.html">Beranda</a>
+
+          <div class="dropdown">
+            <button class="dropdown-btn">Layanan ▾</button>
+            <div class="dropdown-content">
+              <a href="flights.html">Pesawat</a>
+              <a href="hotels.html">Hotel</a>
+              <a href="trains.html">Kereta</a>
+              <a href="bus.html">Bus</a>
+            </div>
+          </div>
+
+          <a href="blog.html">Blog</a>
+        </nav>
+      </div>
+    </header>
+  
+    
+
+
+    <main class="flight-main">
+      <div class="container">
+        <div class="flight-layout">
+          
+          <!-- SIDEBAR FILTER -->
+          <aside class="flight-filters" id="trainFilters">
+            <div class="filter-card">
+              <div class="filter-header">
+                <h2>Filter</h2>
+                <button class="filter-reset" id="resetTrainFilters">Reset</button>
+              </div>
+
+              <!-- Filter Harga -->
+              <div class="filter-section">
+                <h3>Harga</h3>
+                <input 
+                  type="range" 
+                  min="0" 
+                  max="500000" 
+                  value="500000" 
+                  step="10000" 
+                  id="trainPriceRange" 
+                  class="price-slider"
+                />
+                <div class="filter-range-labels">
+                  <span>Rp 0</span>
+                  <span id="trainMaxPrice">Rp 500.000</span>
+                </div>
+              </div>
+
+              <!-- Filter Waktu Keberangkatan -->
+              <div class="filter-section">
+                <h3>Waktu Keberangkatan</h3>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="pagi" class="time-filter">
+                  Pagi (00:00 - 11:59)
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="siang" class="time-filter">
+                  Siang (12:00 - 17:59)
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="malam" class="time-filter">
+                  Malam (18:00 - 23:59)
+                </label>
+              </div>
+
+              <!-- Filter Kelas Kereta -->
+              <div class="filter-section">
+                <h3>Kelas Kereta</h3>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="ekonomi" class="class-filter">
+                  Ekonomi
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="bisnis" class="class-filter">
+                  Bisnis
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="eksekutif" class="class-filter">
+                  Eksekutif
+                </label>
+              </div>
+
+              <!-- Filter Nama Kereta -->
+              <div class="filter-section">
+                <h3>Nama Kereta</h3>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="argo parahyangan" class="train-name-filter">
+                  Argo Parahyangan
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="gajayana" class="train-name-filter">
+                  Gajayana
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="taksaka" class="train-name-filter">
+                  Taksaka
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="bima" class="train-name-filter">
+                  Bima
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" value="argo bromo anggrek" class="train-name-filter">
+                  Argo Bromo Anggrek
+                </label>
+              </div>
+
+            </div>
+          </aside>
+
+          <!-- RESULTS SECTION -->
+          <section class="train-results">
+            <div class="results-header">
+              <div>
+                <h2 id="trainResultsTitle">Kereta  → </h2>
+                <p id="trainResultsSubtitle">0 kereta tersedia</p>
+              </div>
+              
+              <!-- SORTING -->
+              <div class="results-actions">
+                <button class="btn-filter-toggle" id="showTrainFilters">
+                  🔍 Filter
+                </button>
+                <select id="sortTrains" class="sort-select">
+                  <option value="cheapest">Termurah</option>
+                  <option value="earliest">Paling Awal</option>
+                  <option value="latest">Paling Akhir</option>
+                  <option value="shortest">Terpendek</option>
+                  <option value="rating">Rating Tertinggi</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- TRAIN CARDS CONTAINER -->
+            <div id="trainCards" class="train-card-list"></div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <br>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo footer-logo">
+              <div class="logo-icon">✈</div>
+              <span class="logo-text">TravelHub</span>
+            </a>
+            <p class="footer-text">Satu aplikasi untuk semua kebutuhan perjalanan Anda. Pesan tiket pesawat, hotel,
+              kereta, dan lainnya dengan mudah.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-circle">f</a>
+              <a href="#" class="social-circle">t</a>
+              <a href="#" class="social-circle">in</a>
+              <a href="#" class="social-circle">▶</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-title">Produk</h3>
+            <ul class="footer-links">
+              <li><a href="flights.html">Pesawat</a></li>
+              <li><a href="hotels.html">Hotel</a></li>
+              <li><a href="trains.html">Kereta Api</a></li>
+              <li><a href="bus.html">Bus &amp; Travel</a></li>
+              <li><a href="#">Sewa Mobil</a></li>
+              <li><a href="#">Event</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Perusahaan</h3>
+            <ul class="footer-links">
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="blog.html">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Dukungan</h3>
+            <ul class="footer-links">
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">Hubungi Kami</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat &amp; Ketentuan</a></li>
+            </ul>
+            <h3 class="footer-title footer-title-spaced">Kontak</h3>
+            <ul class="footer-links">
+              <li><a href="mailto:info@travelhub.com">info@travelhub.com</a></li>
+              <li><a href="tel:+622150001234">+62 21 5000 1234</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2025 TravelHub. All Rights Reserved.</p>
+          <p>Made with ❤️ in Indonesia</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/tiket.cim/tiket.cim/assets/js/script.js"></script>
+  </body>
+</html>

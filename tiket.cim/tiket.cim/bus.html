@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiket Bus & Travel - Travexia</title>
+  <meta name="description" content="Pesan tiket bus dan travel antar kota dengan harga terbaik dan layanan 24 jam">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/styles.css" />
+  <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/bus.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container main-header">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">✈</div>
+        <span class="logo-text">Travexia</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="index.html">Beranda</a>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Layanan ▾</button>
+          <div class="dropdown-content">
+            <a href="flights.html">Pesawat</a>
+            <a href="hotels.html">Hotel</a>
+            <a href="trains.html">Kereta</a>
+            <a href="bus.html" class="nav-link-active">Bus</a>
+          </div>
+        </div>
+
+    
+        <a href="blog.html">Blog</a>
+      </nav>
+
+      <a href="https://wa.me/62895639068080" target="_blank" class="btn-primary desktop-only">
+        Pesan Sekarang
+      </a>
+
+      <button id="mobileMenuButton" class="mobile-menu-button">☰</button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <nav>
+        <a href="index.html">Beranda</a>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Layanan ▾</button>
+          <div class="dropdown-content">
+            <a href="flights.html">Pesawat</a>
+            <a href="hotels.html">Hotel</a>
+            <a href="trains.html">Kereta</a>
+            <a href="bus.html">Bus</a>
+          </div>
+        </div>
+
+     
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section class="page-title" style="background-image: url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&h=400&fit=crop');">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ol>
+          <li><a href="index.html">Beranda</a></li>
+          <li class="current">Bus & Travel</li>
+        </ol>
+      </div>
+      <h1>Tiket Bus & Travel Antar Kota</h1>
+      <p>Perjalanan nyaman dengan harga terjangkau ke berbagai destinasi</p>
+    </div>
+  </section>
+
+  <!-- BUS HERO SEARCH -->
+  
+  <!-- BUS RESULTS -->
+  <section class="section bus-main">
+    <div class="container">
+      <div class="bus-layout">
+        
+        <!-- Filters -->
+        <aside class="bus-filters" id="busFilters">
+          <div class="filter-card">
+            <div class="filter-header">
+              <h2>Filter</h2>
+              <button class="filter-reset" id="resetFilters">Reset</button>
+            </div>
+
+            <div class="filter-section">
+              <h3>Harga</h3>
+              <input type="range" min="0" max="500000" value="500000" step="10000" id="priceRange" class="price-slider">
+              <div class="filter-range-labels">
+                <span>Rp 0</span>
+                <span id="maxPrice">Rp 500.000</span>
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h3>Waktu Keberangkatan</h3>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="pagi" class="time-filter">
+                Pagi (00:00 - 11:59)
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="siang" class="time-filter">
+                Siang (12:00 - 17:59)
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="malam" class="time-filter">
+                Malam (18:00 - 23:59)
+              </label>
+            </div>
+
+            <div class="filter-section">
+              <h3>Tipe Bus</h3>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="ekonomi" class="type-filter">
+                Ekonomi
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="patas" class="type-filter">
+                Patas AC
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="executive" class="type-filter">
+                Executive
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="super-executive" class="type-filter">
+                Super Executive
+              </label>
+            </div>
+
+            <div class="filter-section">
+              <h3>Operator</h3>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="primajasa" class="operator-filter">
+                Primajasa
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="lorena" class="operator-filter">
+                Lorena
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="pahala-kencana" class="operator-filter">
+                Pahala Kencana
+              </label>
+              <label class="filter-checkbox">
+                <input type="checkbox" value="rosalia-indah" class="operator-filter">
+                Rosalia Indah
+              </label>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- Results -->
+         
+        <div class="bus-results">
+          
+          <div class="results-header">
+            <div>
+              <h2 id="resultsTitle">Bus & Travel Tersedia</h2>
+              <p id="resultsSubtitle">Pilih jadwal keberangkatan yang sesuai</p>
+            </div>
+            <div class="results-controls">
+              <select class="sort-select" id="sortBus">
+                <option value="cheapest">Termurah</option>
+                <option value="earliest">Paling Pagi</option>
+                <option value="latest">Paling Sore</option>
+                <option value="shortest">Tercepat</option>
+              </select>
+              <button class="btn-outline hide-on-desktop" id="showFilters">
+                <i data-lucide="sliders-horizontal"></i> Filter
+              </button>
+            </div>
+          </div>
+
+          <div class="bus-cards" id="busCards">
+            <!-- Diisi via JS -->
+          </div>
+
+          <div class="load-more-wrapper" id="loadMoreWrapper" style="display: none;">
+            <button class="btn-outline" id="loadMoreBtn">
+              Muat Lebih Banyak
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title-center">
+        <h2>Mengapa Pesan Bus di Travexia?</h2>
+        <p>Kemudahan dan keuntungan yang kami tawarkan</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">💳</div>
+          <h3 class="feature-title">Harga Terjangkau</h3>
+          <p class="feature-text">Dapatkan harga terbaik dengan berbagai promo menarik setiap hari</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🚌</div>
+          <h3 class="feature-title">Pilihan Lengkap</h3>
+          <p class="feature-text">Berbagai operator dan tipe bus dari ekonomi hingga super executive</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">Booking Mudah</h3>
+          <p class="feature-text">Pesan tiket kapan saja dan dimana saja hanya dengan beberapa klik</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🎫</div>
+          <h3 class="feature-title">E-Ticket Instant</h3>
+          <p class="feature-text">Tiket langsung dikirim ke email dan WhatsApp setelah pembayaran</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR ROUTES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-center">
+        <h2>Rute Populer</h2>
+        <p>Destinasi favorit pelanggan kami</p>
+      </div>
+      <div class="card-grid four-cols" id="popularRoutes">
+        <!-- Diisi via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footerr">
+    <div class="footerr-main">
+      <div class="container footerr-grid">
+        <div class="footerr-brand">
+          <a href="index.html" class="logo footerr-logo">
+            <div class="logo-icon">✈</div>
+            <span class="logo-text">Travexia</span>
+          </a>
+          <p class="footerr-text">Satu aplikasi untuk semua kebutuhan perjalanan Anda. Pesan tiket pesawat, hotel,
+            kereta, dan lainnya dengan mudah.</p>
+          <div class="footerr-socials">
+            <a href="#" class="social-circle">f</a>
+            <a href="#" class="social-circle">t</a>
+            <a href="#" class="social-circle">in</a>
+            <a href="#" class="social-circle">▶</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footerr-title">Produk</h3>
+          <ul class="footerr-links">
+            <li><a href="flights.html">Pesawat</a></li>
+            <li><a href="hotels.html">Hotel</a></li>
+            <li><a href="trains.html">Kereta Api</a></li>
+            <li><a href="bus.html">Bus &amp; Travel</a></li>
+            <li><a href="sewamobil.html">Sewa Mobil</a></li>
+            <li><a href="events.html">Event</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footerr-title">Perusahaan</h3>
+          <ul class="footerr-links">
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Karir</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footerr-title">Dukungan</h3>
+          <ul class="footerr-links">
+            <li><a href="#">Pusat Bantuan</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat &amp; Ketentuan</a></li>
+          </ul>
+          <h3 class="footerr-title footerr-title-spaced">Kontak</h3>
+          <ul class="footerr-links">
+            <li><a href="mailto:info@travexia.com">info@travexia.com</a></li>
+            <li><a href="tel:+622150001234">+62 21 5000 1234</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footerr-bottom">
+      <div class="container footerr-bottom-inner">
+        <p>© 2025 Travexia. All Rights Reserved.</p>
+        <p>Made with ❤️ in Indonesia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="/tiket.cim/tiket.cim/assets/js/bus.js"></script>
+  <script src="/tiket.cim/tiket.cim/assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>

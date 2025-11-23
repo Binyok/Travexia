@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tiket.cim - Cari Hotel</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/hotel.css" />
+  <link rel="stylesheet" href="/tiket.cim/tiket.cim/assets/css/flight.css" />
+  
+</head>
+
+<body>
+  <header class="header">
+
+    <div class="container main-header">
+      <a href="index.html#home" class="logo">
+        <div class="logo-icon">✈</div>
+        <span class="logo-text">tiket.cim</span>
+      </a>
+
+      <nav class="nav-desktop">
+        <a href="#home">Beranda</a>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Layanan ▾</button>
+          <div class="dropdown-content">
+            <a href="flights.html">Pesawat</a>
+            <a href="hotels.html">Hotel</a>
+            <a href="trains.html">Kereta</a>
+            <a href="bus.html">Bus</a>
+          </div>
+        </div>
+
+        <a href="blog.html">Blog</a>
+      </nav>
+      <!-- Tombol desktop -->
+      <a href="https://wa.me/62895639068080" target="_blank" class="btn-primary desktop-only">
+        Pesan Sekarang
+      </a>
+
+      <!-- Tombol hamburger -->
+      <button id="mobileMenuButton" class="mobile-menu-button">☰</button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <nav>
+        <a href="#home">Beranda</a>
+
+        <div class="dropdown">
+          <button class="dropdown-btn">Layanan ▾</button>
+          <div class="dropdown-content">
+            <a href="flights.html">Pesawat</a>
+            <a href="hotels.html">Hotel</a>
+            <a href="trains.html">Kereta</a>
+            <a href="bus.html">Bus</a>
+          </div>
+        </div>
+
+        
+        <a href="blog.html">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO + SEARCH HOTEL -->
+  <section class="flight-hero">
+    <div class="container">
+      <div class="">
+        <div class="flight-hero-text">
+          <h1>Cari hotel terbaik untuk perjalananmu</h1>
+          <p>Pilih destinasi, tanggal menginap, dan dapatkan hotel dengan harga terbaik.</p>
+
+        </div>
+      </div>
+  </section>
+
+  <main class="flight-main">
+    <div class="container">
+      <section class="hotel-results">
+        <div class="results-header">
+          <div>
+            <h2 id="hotelResultsTitle">Hotel di Jakarta</h2>
+            <p id="hotelResultsSubtitle">0 hotel ditemukan</p>
+          </div>
+          <div class="form-field flight-field" data-icon="from" style="position:relative;">
+            <!-- Input untuk kota -->
+            <input type="text" id="hotelLocationInput" placeholder="Mau ke mana?" autocomplete="off">
+
+            <!-- Dropdown kota muncul di bawah input -->
+            <div id="hotelDropdown" class="dropdown" style="
+       display:none; 
+       position:absolute; 
+       top:100%; 
+       left:0; 
+       width:100%; 
+       background:#fff; 
+       border:1px solid #ccc; 
+       z-index:1000;"
+       >
+            </div>
+          </div>
+
+          <div class="results-controls">
+            <select id="hotelSortSelect" class="sort-select">
+              <option value="price-asc">Harga Termurah</option>
+              <option value="rating-desc">Rating Tertinggi</option>
+              <option value="popular">Populer</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="hotelCards" class="hotel-card-grid"></div>
+
+        <div id="hotelLoadMoreWrapper" class="load-more-wrapper hidden">
+          <button id="hotelLoadMoreButton" class="btn-outline">Muat Lebih Banyak Hotel</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+      <div class="footer-main">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo footer-logo">
+              <div class="logo-icon">✈</div>
+              <span class="logo-text">TravelHub</span>
+            </a>
+            <p class="footer-text">Satu aplikasi untuk semua kebutuhan perjalanan Anda. Pesan tiket pesawat, hotel, kereta, dan lainnya dengan mudah.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-circle">f</a>
+              <a href="#" class="social-circle">t</a>
+              <a href="#" class="social-circle">in</a>
+              <a href="#" class="social-circle">▶</a>
+            </div>
+          </div>
+          <div>
+            <h3 class="footer-title">Produk</h3>
+            <ul class="footer-links">
+              <li><a href="flights.html">Pesawat</a></li>
+              <li><a href="#">Hotel</a></li>
+              <li><a href="#">Kereta Api</a></li>
+              <li><a href="#">Bus &amp; Travel</a></li>
+              <li><a href="#">Sewa Mobil</a></li>
+              <li><a href="#">Event</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Perusahaan</h3>
+            <ul class="footer-links">
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="footer-title">Dukungan</h3>
+            <ul class="footer-links">
+              <li><a href="#">Pusat Bantuan</a></li>
+              <li><a href="#">Hubungi Kami</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat &amp; Ketentuan</a></li>
+            </ul>
+            <h3 class="footer-title footer-title-spaced">Kontak</h3>
+            <ul class="footer-links">
+              <li><a href="mailto:info@travelhub.com">info@travelhub.com</a></li>
+              <li><a href="tel:+622150001234">+62 21 5000 1234</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2025 TravelHub. All Rights Reserved.</p>
+          <p>Made with ❤ in Indonesia</p>
+        </div>
+      </div>
+    </footer>
+     <script src="/tiket.cim/tiket.cim/assets/js/script.js"></script>
+    <script src="/tiket.cim/tiket.cim/assets/js/hotels.js"></script>
+    
+
+
+   
+    <script>
+      const input = document.getElementById("hotelLocationInput");
+const dropdown = document.getElementById("hotelDropdown");
+
+let dropdownOpen = false;
+
+// klik input → toggle
+input.addEventListener("click", function (e) {
+  dropdownOpen = !dropdownOpen;
+  dropdown.style.display = dropdownOpen ? "block" : "none";
+});
+
+// klik di luar → tutup
+document.addEventListener("click", function (e) {
+  if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+    dropdown.style.display = "none";
+    dropdownOpen = false;
+  }
+});
+
+
+    </script>
+  </body>
+</html>
