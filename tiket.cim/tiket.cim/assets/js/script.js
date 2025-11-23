@@ -204,7 +204,7 @@ function renderPromos() {
         const btn = createElement('button', 'card-link', 'Pesan Sekarang →');
         btn.type = 'button';
         btn.addEventListener('click', () => {
-          window.location.href = 'promo-detail.html?id=' + promo.id;
+          window.location.href = 'p/promo-detail.html?id=' + promo.id;
         });
         return btn;
       })()
@@ -244,7 +244,7 @@ function renderDestinations() {
     card.addEventListener('mouseleave', () => img.style.transform = 'scale(1)');
 
     card.addEventListener('click', () => {
-      window.location.href = 'destinasi-detail.html?id=' + dest.id;
+      window.location.href = 'p/destinasi-detail.html?id=' + dest.id;
     });
 
     const overlay = createElement('div', 'dest-overlay');
@@ -450,7 +450,7 @@ function setupFlightSearchButton() {
     showSuccess('Mencari penerbangan terbaik untuk Anda...');
     
     setTimeout(() => {
-      window.location.href = `flights.html?${params.toString()}`;
+      window.location.href = `p/flights.html?${params.toString()}`;
     }, 800);
   });
 }
@@ -489,7 +489,7 @@ function setupHotelSearchButton() {
     showSuccess('Mencari hotel terbaik untuk Anda...');
     
     setTimeout(() => {
-      window.location.href = `hotels.html?${params.toString()}`;
+      window.location.href = `p/hotels.html?${params.toString()}`;
     }, 800);
   });
 }
@@ -528,7 +528,7 @@ function setupTrainSearchButton() {
     showSuccess('Mencari kereta api untuk Anda...');
     
     setTimeout(() => {
-      window.location.href = `trains.html?${params.toString()}`;
+      window.location.href = `p/trains.html?${params.toString()}`;
     }, 800);
   });
 }
@@ -572,7 +572,7 @@ function setupBusSearchButton() {
     showSuccess('Mencari bus untuk Anda...');
     
     setTimeout(() => {
-      window.location.href = `bus.html?${params.toString()}`;
+      window.location.href = `p/bus.html?${params.toString()}`;
     }, 800);
   });
 }
